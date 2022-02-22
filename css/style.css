@@ -1,0 +1,680 @@
+
+html{
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    min-width:1324px;
+    font-size:16px;
+    line-height:1.875;
+    font-family:"Arial";color:#444444;scroll-behavior:smooth;
+    background:url(../img/musical-background.jpg) no-repeat;
+    background-attachment:fixed;
+
+    background-position-y:bottom;
+    background-size: cover;
+}
+
+
+/* header */
+
+.header{
+    height:690px;
+    background:url(../img/page-header2.png) no-repeat;
+    border: 2px solid #000;
+    background-size: 100%;
+    background-position:center center;
+   background-size:cover;
+}
+
+a{
+    color:#834700;
+    text-decoration: none;
+}
+a:hover{
+    color:#6a3900
+}
+a:active{
+    color:rgba(106,57,0,0.5)
+}
+
+.section {
+    width: 100%;
+    max-width: 1324px;
+     margin: auto;
+     margin-bottom: 36px;
+    box-sizing: border-box;
+
+}
+
+.main-nav{
+    position:absolute;
+}
+
+.site-list{
+    display: flex;
+    width: 620px;
+    height: 60px;
+    padding: 0;
+    list-style: none;
+    border: 0 solid rgba(255,255,255,0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position:absolute;
+    left: 600px;
+}
+
+.site-list:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.site-list > li {
+    position: relative;
+}
+
+.site-list > li > a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    color: #834700;
+    
+    padding: 8px;
+  }
+
+.site-list li a:hover {
+    color: #D5B45B;
+}
+.submenu-link:after {
+  content: "\f107";
+  font-family: "FontAwesome";
+  color: inherit;
+}
+.submenu {
+  
+  position: absolute;
+  top: 100%;
+  z-index: 5;
+  width: 180px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin :0 0;
+  transition: .5s ease-in-out;
+}
+.submenu a {
+  color: #834700;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.submenu li:last-child a {
+    border-bottom: none;
+}
+
+.site-list > li:hover .submenu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+
+
+.site-list__link{
+    display:flex;
+    align-items:center;
+    height:100%;
+    font-weight:bold;
+    line-height:1;
+    text-transform:uppercase;
+    text-decoration:none
+}
+.site-list__link:focus,.site-list__link:hover{
+    color:#ffcb78;
+    border-bottom:1px solid #ffffff
+}
+.site-list__link:not([href]){
+    color:rgba(255,203,120,0.5);
+    border-bottom:1px solid #ffffff
+}
+
+.phone{
+    padding-top: 120px;
+    text-align:center;
+    font-size: 30px;
+    line-height: 26px;
+    padding-left: 760px;
+    text-decoration: none;
+}
+
+.phone-img{
+    height: 30px;
+    width: 30px;
+    padding-top: 5px;
+    margin-right: 10px;
+}
+
+.page-header__schedule{
+    text-align:center;
+    color:#834700;
+    font-size: 30px;
+  line-height: 26px;
+  padding-left: 765px;
+}
+
+
+
+
+.section-background{
+    background:url(../img/musical2.jpg) no-repeat;
+    background-attachment: fixed;
+    max-width: 1920px;
+    background-position:center center;
+    height: 280px;
+    margin:auto;
+    background-size:cover;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 30px;
+    text-align: center;
+}
+
+.dream{
+    color: #834700;
+    position: relative;
+  color: black;
+  -webkit-text-stroke: .04em black;
+}
+
+.dream::before{
+    content: attr(data-text);
+    position: absolute; 
+    left: 0;
+    right: 0;
+    color: yellow;
+}
+
+.background__dream{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    min-width: 1324px;
+    background-size: auto;
+    background-position:center center;
+}
+
+
+
+    /* section-info */
+.section-info{
+    background-size: 100%;
+    background-position:center center;
+    background-size:cover;
+    width: 100%;
+    max-width: 1324px;
+    margin: auto;
+    box-sizing: border-box;
+}
+.school{
+    display: flex;
+    flex-direction: column;
+}
+.info__title{
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    min-width: 1324px;
+    background-size: auto;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.info__school {
+    
+    color: #834700;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+    background-position: bottom;
+    margin: 5px auto;
+    font-weight:bold;
+    font-size:20px;
+    line-height:1.5;
+    text-align: center;
+    padding-bottom: 5px;
+    border-radius: 16px
+}
+
+.info{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    background: hsla(0,0%,100%,.3);
+    overflow: hidden;
+    padding: 17px;
+    border-radius: 15px;
+}
+
+.info__body{
+    flex: 1 1;
+    text-align: center;
+    color:#834700;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    
+    background-position: center;
+    margin:auto;
+    font-size:20px;
+    line-height:1.5;
+    margin-right: 30px;
+    border-radius: 16px;
+    
+}
+    
+
+.photo{
+    max-width: 500px;
+    max-height: 500px;
+    box-shadow: 6px 6px;
+}
+
+.more{
+    display:inline-block;
+    line-height:1.25;
+    font-weight:bold;
+    text-transform:uppercase;
+    text-decoration:none;
+    padding-top: 30px;
+}
+
+
+
+        /* instruments */
+
+
+.section-instruments{
+    width: 100%;
+    max-width: 1324px;
+     margin: auto;
+     margin-bottom: 36px;
+    box-sizing: border-box;
+}
+
+ .instruments {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: hsla(0,0%,100%,.3);
+    overflow: hidden;
+    padding: 17px;
+    border-radius: 15px;
+}
+        
+ .instruments__title {
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    min-width: 1324px;
+    background-size: auto;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+        
+.instruments__title__about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+        
+ .about__instruments {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color:#834700;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    padding: 8px;
+    justify-content: space-evenly;
+    border: 1px solid rgb(66, 65, 65);
+    max-width: 840px;
+    border-radius: 16px;
+    
+}
+
+.instruments__title__about--image{
+    padding-top: 8px;
+}
+
+.about--image{
+    margin-bottom: 5px;
+    box-shadow: 6px 6px;
+}
+
+
+        /* TRIAL SECTION */
+
+.section-trial{
+    width: 100%;
+    max-width: 1320px;
+     margin: auto;
+     margin-bottom: 36px;
+    box-sizing: border-box;
+}
+
+.trial {
+    display: flex;
+    flex-direction: column;
+}
+
+.trial__title{
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    min-width: 1324px;
+    background-size: auto;
+    background-position: bottom;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.trial__title__lessons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.trial__lessons{
+    color:#834700;
+    border: 1px solid rgb(66, 65, 65);
+    align-items: flex-end;
+    background:url(../img/anime-guitar.jpg) 0  no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position:center center;
+
+    min-width: 1324px;
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 75px 20px;
+    font-weight:bold;
+
+    overflow: hidden;
+}
+
+.trial__lessons--li{
+    position: relative;
+    background: hsla(0,0%,100%,.3);
+    overflow: hidden;
+    padding: 17px;
+    border-radius: 15px;
+}
+
+        /* PAST SECTION */
+
+.section-past{
+    width: 100%;
+    max-width: 1320px;
+     margin: auto;
+     margin-bottom: 36px;
+    box-sizing: border-box;
+}
+
+
+
+.past{
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    
+}
+.past__title{
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    min-width: 1324px;
+    background-size: auto;
+    background-position: bottom;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.past__our__past{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.our__past{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color:#834700;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    border: 1px solid rgb(66, 65, 65);
+    padding: 3px;
+    margin-top: 7px;
+    border-radius: 16px;
+    
+}
+
+.about__our__past{
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+    color:#834700;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    border: 1px solid rgb(66, 65, 65);
+    border-radius: 16px; 
+}
+
+     
+
+        /* PRICE SECTION */
+
+
+
+.section-price{
+    width: 100%;
+    max-width: 1324px;
+    margin: auto;
+    margin-bottom: 36px;
+    box-sizing: border-box;
+}
+        
+.price {
+    display: flex;
+    flex-direction: column;
+            
+}
+                
+.price__title {
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background:url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    min-width: 1324px;
+    background-size: auto;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+            
+}
+                
+.price__lessons__title {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background:url(../img/private.jpg) no-repeat;
+    background-attachment:local;
+    background-position: center center;
+    min-width: 1324px;
+    min-height: 500px;
+    background-size: auto;
+    border-radius: 16px;
+            
+}
+
+.price__lessons--li{
+    position: relative;
+    background:hsl(0deg 5% 6% / 30%);
+    overflow: hidden;
+    padding: 17px;
+    border-radius: 15px;
+}
+                
+.price__lessons__body--text {
+    display: flex;
+    flex-direction: column;
+    text-align:left;
+    text-decoration: none;
+    color:#834700;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    padding: 8px;
+    justify-content: space-evenly;
+    max-width: 600px;
+    border-radius: 16px;
+    flex:  50%;
+            
+
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+    box-sizing: border-box;
+    font-weight: bold;
+             
+}
+
+        /* footer */
+
+.section-footer{
+    width: 100%;
+    max-width: 1324px;
+     margin: auto;
+     margin-bottom: 10px;
+    box-sizing: border-box;
+    position: relative;
+    background:hsla(0,0%,100%,.3);
+     overflow: hidden;
+     padding: 17px;
+    border-radius: 15px;
+}
+
+.footer__title{
+    color: #834700;
+    text-align: center;
+    font-size: 30px;
+    background: url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    min-width: 1324px;
+    background-size: auto;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.footer__body{
+    display: flex;
+    flex-direction: row-reverse;
+    color:#834700;
+    font-size: 26px;
+    background: url(../img/photo-info2.jpg) no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    min-width: 1290px;
+    
+    
+    text-align: center;
+    text-decoration: none;
+    background-size: cover;
+    border: 1px solid rgb(66, 65, 65);
+    border-radius: 16px;
+    margin-bottom: 30px;
+}
+
+.footer__email{
+    text-align: start;
+   align-items: center;
+   padding-left: 40px;
+}
+
+.footer--img{
+    width: 40px;
+    position: absolute;
+    right: 658px;
+}
+
+
+
+
+ .map-responsive{
+    overflow:hidden;
+    padding-bottom: 500px;
+    position:relative;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:500px;
+    width:100%;
+    position:absolute;
+    padding: 0;
+}
+
+.footer__body__bottom{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    color:#834700;
+    font-size: 24px;
+}
+
+.footer__number{
+    margin: auto;
+}
+
+.footer__link--p{
+    margin: 0;
+}
